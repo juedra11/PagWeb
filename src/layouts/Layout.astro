@@ -1,0 +1,225 @@
+---
+import Header from "../components/header.astro";
+import Banner from "../components/Banner.astro";
+import Card from "../components/card.astro";
+import Form from "../components/form.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo1.jpeg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+
+  <body>
+    <Header />
+
+    <div class="h-full w-full mt-[50px]">
+      <Banner
+        title="NeuraTech"
+        img="/logo3.png"
+        desciption="La solución tecnológica que necesita tu empresa"
+      />
+
+      <section class="bg-white text-[#2C3E50]" id="Portafolio">
+        <div class="flex flex-col justify-center items-center text-center">
+          <h1 class="mt-5 text-4xl font-bold">PORTAFOLIO</h1>
+          <br />
+          <hr class="w-[50%] my-4 border-2 border-gray-500" />
+          <br />
+          <div class="grid grid-cols-3 content-between w-[75%] mb-10">
+            <Card
+              imag="Portafolio/DesarrolloElec.png"
+              alt="Servicio 1"
+              descriptionFront="Desarrollo de productos electrónicos"
+			  descriptionBack="Ofrecemos servicios de diseño y prototipado de circuitos electrónicos, desarrollo de dispositivos a medida, fabricación y ensamblaje de productos electrónicos, así como consultoría en la integración de hardware y software para optimizar sistemas y garantizar su eficiencia y funcionalidad."
+            />
+
+            <Card
+              imag="Portafolio/SoftwareDev.png"
+              alt="Desarollo de software"
+              descriptionFront="Desarrollo de software"
+			  descriptionBack="Desarrollamos aplicaciones móviles, web y software a medida para optimizar procesos en diversos sectores. También integramos software en sistemas embebidos y ofrecemos consultoría en transformación digital para mejorar procesos internos."
+            />
+
+            <Card
+              imag="Portafolio/IoTSolution.png"
+              alt="Soluciones en IoT"
+              descriptionFront="Soluciones en IoT (Internet de las Cosas)"
+			  descriptionBack="Desarrollamos soluciones IoT para monitoreo y control en tiempo real, plataformas de gestión para administrar dispositivos conectados e integramos IoT con sistemas empresariales como ERP y CRM."
+            />
+
+            <Card
+              imag="/Portafolio/industrial-automatitation.png"
+              alt="Automatización Industrial"
+              descriptionFront="Automatización Industrial"
+			  descriptionBack="Diseñamos sistemas de control automatizado para procesos industriales, desarrollamos interfaces de control remoto y conectamos dispositivos electrónicos con sistemas de monitoreo de producción."
+            />
+
+            <Card
+              imag="/Portafolio/Consultin.png"
+              alt="Consultoria Tecnológica"
+              descriptionFront="Consultoría Tecnológica"
+			  descriptionBack="Realizamos auditorías para optimizar sistemas, capacitamos equipos en tecnologías emergentes y asesoramos en proyectos de innovación tecnológica para maximizar su impacto."
+            />
+
+            <Card
+              imag="/Portafolio/maintenance.png"
+              alt="Mantenimiento tecnológico"
+              descriptionFront="Mantenimiento y Soporte Técnico"
+			  descriptionBack="Ofrecemos mantenimiento de productos electrónicos, soporte postventa de software y monitoreo remoto para garantizar el funcionamiento óptimo de dispositivos y sistemas."
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bg-sky-400 text-[#2C3E50] text-xl"
+        id="Nosotros"
+      >
+        <div class="flex flex-col justify-center items-center text-center">
+          <h1 class="mt-5 text-4xl font-bold ">SOBRE NOSOTROS</h1>
+          <br />
+          <hr class="w-[50%] my-4 border-2 border-gray-500" />
+          <div
+            class="grid grid-cols-2 w-[70%] text-justify justify-items-center"
+          >
+            <section class="w-[95%] mb-10">
+              <h2 class="mt-5 text-4xl font-bold text-center underline">
+                MISIÓN
+              </h2>
+              <p class="mt-4">
+                En NeuraTech, nos dedicamos a ofrecer soluciones tecnológicas
+                innovadoras en los campos de desarrollo electrónico y software,
+                con un enfoque integral que abarca desde la creación de
+                productos electrónicos hasta el diseño y la implementación de
+                soluciones de software personalizadas. Nuestro objetivo es
+                impulsar la transformación digital en Colombia y Latinoamérica,
+                mejorando la competitividad de empresas, optimizando procesos y
+                brindando a nuestros clientes herramientas de vanguardia que
+                resuelvan sus necesidades tecnológicas de manera eficiente y
+                sostenible.
+              </p>
+            </section>
+            <section class="w-[95%]">
+              <h2 class="mt-5 text-4xl font-bold text-center underline">
+                VISIÓN
+              </h2>
+              <p class="mt-4">
+                Ser reconocidos como líderes en el desarrollo y la integración
+                de soluciones electrónicas y de software, ofreciendo productos y
+                servicios innovadores que aporten al progreso tecnológico de la
+                región. Nos visualizamos como una empresa que fomenta la
+                creación de tecnología con un impacto positivo en la vida
+                diaria, contribuyendo al desarrollo de sectores clave en
+                Colombia, y posicionándonos como un socio estratégico para
+                empresas que buscan modernizar sus operaciones y procesos.
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white text-[#2C3E50] mb-10" id="Proyectos">
+        <div class="flex flex-col justify-center items-center text-center">
+          <h1 class="mt-5 text-4xl font-bold">PROYECTOS</h1>
+          <br />
+          <hr class="w-[50%] my-4 border-2 border-gray-500" />
+          <br />
+          <div class="grid grid-cols-3 content-between w-[75%]">
+            <Card
+              imag="Portafolio/auditoria.jpeg"
+              alt="Servicio 1"
+              descriptionFront="Servicio de auditoria técnica y especializada para su empreza en el contexto de técnologias"
+			  descriptionBack=""
+            />
+
+			<Card
+              imag="Portafolio/auditoria.jpeg"
+              alt="Servicio 1"
+              descriptionFront="Servicio de auditoria técnica y especializada para su empreza en el contexto de técnologias"
+			  descriptionBack=""
+            />
+
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-sky-400 text-[#2C3E50] mb-10" id="Contactos">
+        <div class="flex flex-col justify-center items-center text-center">
+          <h1 class="mt-5 text-4xl font-bold">CONTACTANOS</h1>
+          <br />
+          <hr class="w-[50%] my-4 border-2 border-gray-500" />
+          <br />
+
+			
+
+			<form class=" w-[30%] text-left mb-10" id="cont">
+
+				<Form Titulo="Nombre del Usuario" param="from_name"/>
+				<Form Titulo="Mensaje" param="message"/>
+				<Form Titulo="Correo electrónico" param="id_correo"/>
+
+				<input type="submit" id="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"/>
+			</form>
+        </div>
+
+
+      </section>
+    </div>
+  </body>
+</html>
+
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+></script>
+
+<script type="text/javascript">
+  emailjs.init("CUIvmJr8FNOTw0MVu");
+</script>
+
+<script>
+  const btn = document.getElementById("button");
+
+  document.getElementById("cont").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    btn.value = "Enviando...";
+
+    const serviceID = "default_service";
+    const templateID = "template_cah9pyw";
+
+    emailjs.sendForm(serviceID, templateID, this).then(
+      () => {
+        btn.value = "Enviar";
+        alert("Correo enviado");
+      },
+      (err) => {
+        btn.value = "Enviar";
+        alert(JSON.stringify(err));
+      }
+    );
+  });
+</script>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

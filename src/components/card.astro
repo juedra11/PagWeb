@@ -1,0 +1,59 @@
+---
+
+const {descriptionFront,descriptionBack,imag,alt} = Astro.props
+
+---
+
+<style>
+    .flip-card{
+        perspective: 1000px;
+        position: relative;
+    }
+    .flip-card:hover > .card{
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+    }
+    .card {
+        position: absolute;
+        transition: 1500ms;
+    }
+    .flip-card:hover > .card-back{
+        transform: rotateY(360deg);
+    }
+    .card-back{
+        transition: 1500ms;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+    }
+</style>
+
+
+<div class="flip-card">
+        
+        <div class="card grid grid-cols-1 text-wrap m-5 bg-gray-50 rounded-lg drop-shadow-md h-[90%]">
+            <div class="flex justify-center items-center text-center mt-3 mx-3 ">
+                <img  src={imag} alt={alt} class="rounded-full w-[65%] " >
+            </div>
+        
+            <div class="flex flex-col justify-center items-center text-center mt-2 mb-3 mx-3 text-lg">
+                <h2> {descriptionFront}</h2>
+            </div>
+        </div>
+
+        <div class="card-back  grid grid-cols-1 text-wrap m-5 bg-gray-50 rounded-lg drop-shadow-md h-[400px]">
+            
+        
+            <div class="flex flex-col justify-center items-center text-center mt-2 mb-3 mx-3 text-lg text-justify">
+                <h2> {descriptionBack}</h2>
+            </div>
+        </div>
+    
+
+    
+    
+    
+
+</div>
+
+
+
