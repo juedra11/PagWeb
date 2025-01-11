@@ -11,7 +11,7 @@ export default {
 			fontFamily:{
 				lato:['Lato','sans-serif'],
 				Audio:['Audiowide','sans-serif'],
-
+				Heue:['Comic Neue', 'serif'],
 			}
 		},
 	},

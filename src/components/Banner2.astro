@@ -1,0 +1,46 @@
+---
+
+const {title,img,img2,img3,desciption}  = Astro.props
+
+---
+
+<div class="relative h-[40%] w-full ">
+    <div class="relative grid grid-cols-2 h-full w-full ">
+        <div class="flex  gap-4 justify-center items-center">
+            <div class=" w-[20%] h-[40%]">
+                <img src={img} class="transition duration-500 rounded-3xl h-full w-full object-cover translate-y-20 hover:-translate-y-0 hover:sepia hover:shadow-2xl hover:shadow-white">
+            </div>
+            <div class=" w-[25%] h-[70%]">
+                <img src={img2} class="transition duration-500 rounded-3xl h-full mt-[50%] w-full -translate-y-24 object-cover hover:-translate-y-28 hover:sepia hover:shadow-2xl hover:shadow-white">
+            </div>
+            <div class=" w-[30%] h-[50%]">
+                <img src={img3} class="transition duration-500 rounded-3xl h-full w-full mt-[50%] -translate-y-14 object-cover hover:-translate-y-28 hover:sepia hover:shadow-2xl hover:shadow-white">
+            </div>
+            
+        </div>
+
+        <div class="flex justify-center items-center">
+            <div class=" w-[75%]">
+                <h1 class="text-6xl text-center">
+                    Descubre 
+                    <span class="text-[#57C7EA] font-bold">nuestro proposito</span>
+                </h1>
+                <br>
+                <br>
+                <p class="text-justify">
+                    En <span class="text-[#57C7EA] font-bold">NeuraTech</span>, nos dedicamos a desarrollar soluciones tecnológicas innovadoras en electrónica y software, ofreciendo productos y servicios personalizados que impulsan la transformación digital en Colombia y Latinoamérica. <span class="text-[#57C7EA] font-bold">Nuestra misión</span> es mejorar la competitividad empresarial y optimizar procesos con herramientas de vanguardia, mientras trabajamos para ser reconocidos como líderes en el sector. <span class="text-[#57C7EA] font-bold">Visualizamos un futuro</span> donde nuestras soluciones tecnológicas tengan un impacto positivo en la región, contribuyendo al progreso de sectores clave y convirtiéndonos en un socio estratégico para empresas que buscan modernizarse y avanzar hacia la sostenibilidad.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+

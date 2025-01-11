@@ -1,16 +1,36 @@
 ---
 
-const {title,img,desciption}  = Astro.props
+const {title,img,img2,desciption}  = Astro.props
 
 ---
 
+<div class="grid grid-cols-2 h-[60%] w-full items-center justify-items-center">
+    <!-- Columna 1 -->
+    <div class="flex h-full text-wrap justify-center items-center text-white">
+        <div class="w-[75%] text-center">
+            <h1 class="text-6xl">
+                <span class="text-[#57C7EA] font-bold">Entra al </span>
+                mundo de la innovación infinita con 
+                <span class="text-[#57C7EA] font-bold">NeuraTech</span>
+            </h1>
+            <br>
+            <h2>Transforma percepciones redefiniendo tu excelencia tecnológica</h2>
+            <br>
+            <br>
+            <a href="#" class="bg-[#129CB6] rounded-md px-4 py-2 inline-block">Explorar</a>
+        </div>
+    </div>
+
+    <!-- Columna 2 -->
+
+    <div class="flex h-full min-h-full justify-center gap-5">
+        <div>
+            <img src={img} class="transition duration-500 rounded-3xl max-h-full h-[60%] mt-[50%] translate-y-10 hover:-translate-y-0 hover:sepia hover:shadow-2xl hover:shadow-white">
+        </div>
+        <div>
+            <img src={img2} class="transition duration-500 rounded-3xl max-h-full h-[60%] mt-[50%] -translate-y-10 hover:-translate-y-12 hover:sepia hover:shadow-2xl hover:shadow-white">
+        </div>
+    </div>
 
 
-<div class="flex bg-gradient-to-br from-sky-200 to-sky-600 h-[60%] w-full text-center justify-center items-center font-Audio">
-    <section class=" my-5 w-[50%] flex flex-col justify-center items-center text-center p-5">
-        <img src={img} class="w-[30%] mb-4 rounded-full" alt="imagen del Baner">
-        <h1 class="mb-2 text-4xl font-bold">{title}</h1>
-        <hr class="w-[50%] my-4">
-        <h2 class="text-2xl">{desciption}</h2>
-    </section>
 </div>

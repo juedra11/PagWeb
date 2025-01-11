@@ -3,6 +3,7 @@ import Header from "../components/header.astro";
 import Banner from "../components/Banner.astro";
 import Card from "../components/card.astro";
 import Form from "../components/form.astro";
+import Banner2 from "../components/Banner2.astro";
 ---
 
 <!doctype html>
@@ -19,143 +20,133 @@ import Form from "../components/form.astro";
       href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Google tag (gtag.js) -->
-    <script async src={`https://www.googletagmanager.com/gtag/js?id=G-WTV7WVZR1S`}></script>
+    <script
+      async
+      src={`https://www.googletagmanager.com/gtag/js?id=G-WTV7WVZR1S`}></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-WTV7WVZR1S');
+      gtag("config", "G-WTV7WVZR1S");
     </script>
-
 
     <meta name="generator" content={Astro.generator} />
 
-    <meta name="desciption" content="NeuraTech es una empresa que se encarga de darte soluciones tecnológicas personalizadas para tu empresa o comercio." />
+    <meta
+      name="desciption"
+      content="NeuraTech es una empresa que se encarga de darte soluciones tecnológicas personalizadas para tu empresa o comercio."
+    />
     <meta name="robots" content="index,follow" />
 
-    <meta name="keywords" content="tecnológia, solucion, comercio, ayuda, software"/>
+    <meta
+      name="keywords"
+      content="tecnológia, solucion, comercio, ayuda, software"
+    />
 
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffffff" />
 
     <title>NeuraTech Tu solución Técnológica</title>
   </head>
 
-  <body>
-    <Header />
+  <body
+    class="relative bg-[#0B1C23] font-Heue text-white font-bold"
+    id="content-main"
+  >
+    <!-- Fondo del puntero -->
+    <div
+      class="absolute h-[500px] w-[500px] z-0 opacity-15 content-center rounded-full blur-md
+    bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#1E4B5E] via-[#163745] to-[#1E4B5E]"
+      id="puntero"
+    >
+    </div>
 
-    <div class="h-full w-full mt-[50px]">
-      <Banner
-        title="NeuraTech"
-        img="/logo3.png"
-        desciption="La solución tecnológica que necesita tu empresa"
-      />
+    <div class="absolute">
+      <Header />
 
-      <section class="bg-white text-[#2C3E50]" id="Portafolio">
-        <div class="flex flex-col justify-center items-center text-center">
-          <h1 class="mt-5 text-4xl font-bold">PORTAFOLIO</h1>
-          <br />
-          <hr class="w-[50%] my-4 border-2 border-gray-500" />
-          <br />
-          <div class="grid grid-cols-3 content-between w-[75%] mb-10">
-            <Card
-              imag="Portafolio/DesarrolloElec.png"
-              alt="Servicio 1"
-              descriptionFront="Desarrollo de productos electrónicos"
-			  descriptionBack="Ofrecemos servicios de diseño y prototipado de circuitos electrónicos, desarrollo de dispositivos a medida, fabricación y ensamblaje de productos electrónicos, así como consultoría en la integración de hardware y software para optimizar sistemas y garantizar su eficiencia y funcionalidad."
-            />
+      <div class="h-full w-full mt-[50px] z-10">
+        <Banner
+          title="NeuraTech"
+          img="parte1.webp"
+          img2="parte2.webp"
+          desciption="La solución tecnológica que necesita tu empresa"
+        />
 
-            <Card
-              imag="Portafolio/SoftwareDev.png"
-              alt="Desarollo de software"
-              descriptionFront="Desarrollo de software"
-			  descriptionBack="Desarrollamos aplicaciones móviles, web y software a medida para optimizar procesos en diversos sectores. También integramos software en sistemas embebidos y ofrecemos consultoría en transformación digital para mejorar procesos internos."
-            />
+        <section class="text-black" id="Portafolio">
+          <div class="flex flex-col justify-center items-center text-center">
+            <div class="grid grid-cols-3 content-between w-[75%] mb-10">
+              <Card
+                imag="Portafolio/DesarrolloElec.png"
+                alt="Servicio 1"
+                descriptionFront="Desarrollo de productos electrónicos"
+                descriptionBack="Ofrecemos servicios de diseño y prototipado de circuitos electrónicos, desarrollo de dispositivos a medida, fabricación y ensamblaje de productos electrónicos, así como consultoría en la integración de hardware y software para optimizar sistemas y garantizar su eficiencia y funcionalidad."
+              />
 
-            <Card
-              imag="Portafolio/IoTSolution.png"
-              alt="Soluciones en IoT"
-              descriptionFront="Soluciones en IoT (Internet de las Cosas)"
-			  descriptionBack="Desarrollamos soluciones IoT para monitoreo y control en tiempo real, plataformas de gestión para administrar dispositivos conectados e integramos IoT con sistemas empresariales como ERP y CRM."
-            />
+              <Card
+                imag="Portafolio/SoftwareDev.png"
+                alt="Desarollo de software"
+                descriptionFront="Desarrollo de software"
+                descriptionBack="Desarrollamos aplicaciones móviles, web y software a medida para optimizar procesos en diversos sectores. También integramos software en sistemas embebidos y ofrecemos consultoría en transformación digital para mejorar procesos internos."
+              />
 
-            <Card
-              imag="/Portafolio/industrial-automatitation.png"
-              alt="Automatización Industrial"
-              descriptionFront="Automatización Industrial"
-			  descriptionBack="Diseñamos sistemas de control automatizado para procesos industriales, desarrollamos interfaces de control remoto y conectamos dispositivos electrónicos con sistemas de monitoreo de producción."
-            />
+              <Card
+                imag="Portafolio/IoTSolution.png"
+                alt="Soluciones en IoT"
+                descriptionFront="Soluciones en IoT (Internet de las Cosas)"
+                descriptionBack="Desarrollamos soluciones IoT para monitoreo y control en tiempo real, plataformas de gestión para administrar dispositivos conectados e integramos IoT con sistemas empresariales como ERP y CRM."
+              />
 
-            <Card
-              imag="/Portafolio/Consultin.png"
-              alt="Consultoria Tecnológica"
-              descriptionFront="Consultoría Tecnológica"
-			  descriptionBack="Realizamos auditorías para optimizar sistemas, capacitamos equipos en tecnologías emergentes y asesoramos en proyectos de innovación tecnológica para maximizar su impacto."
-            />
+              <Card
+                imag="/Portafolio/industrial-automatitation.png"
+                alt="Automatización Industrial"
+                descriptionFront="Automatización Industrial"
+                descriptionBack="Diseñamos sistemas de control automatizado para procesos industriales, desarrollamos interfaces de control remoto y conectamos dispositivos electrónicos con sistemas de monitoreo de producción."
+              />
 
-            <Card
-              imag="/Portafolio/maintenance.png"
-              alt="Mantenimiento tecnológico"
-              descriptionFront="Mantenimiento y Soporte Técnico"
-			  descriptionBack="Ofrecemos mantenimiento de productos electrónicos, soporte postventa de software y monitoreo remoto para garantizar el funcionamiento óptimo de dispositivos y sistemas."
-            />
+              <Card
+                imag="/Portafolio/Consultin.png"
+                alt="Consultoria Tecnológica"
+                descriptionFront="Consultoría Tecnológica"
+                descriptionBack="Realizamos auditorías para optimizar sistemas, capacitamos equipos en tecnologías emergentes y asesoramos en proyectos de innovación tecnológica para maximizar su impacto."
+              />
+
+              <Card
+                imag="/Portafolio/maintenance.png"
+                alt="Mantenimiento tecnológico"
+                descriptionFront="Mantenimiento y Soporte Técnico"
+                descriptionBack="Ofrecemos mantenimiento de productos electrónicos, soporte postventa de software y monitoreo remoto para garantizar el funcionamiento óptimo de dispositivos y sistemas."
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section
-        class="bg-sky-400 text-[#2C3E50] text-xl"
-        id="Nosotros"
-      >
-        <div class="flex flex-col justify-center items-center text-center">
-          <h1 class="mt-5 text-4xl font-bold ">SOBRE NOSOTROS</h1>
-          <br />
-          <hr class="w-[50%] my-4 border-2 border-gray-500" />
-          <div
-            class="grid grid-cols-2 w-[70%] text-justify justify-items-center"
-          >
-            <section class="w-[95%] mb-10">
-              <h2 class="mt-5 text-4xl font-bold text-center underline">
-                MISIÓN
-              </h2>
-              <p class="mt-4">
-                En NeuraTech, nos dedicamos a ofrecer soluciones tecnológicas
-                innovadoras en los campos de desarrollo electrónico y software,
-                con un enfoque integral que abarca desde la creación de
-                productos electrónicos hasta el diseño y la implementación de
-                soluciones de software personalizadas. Nuestro objetivo es
-                impulsar la transformación digital en Colombia y Latinoamérica,
-                mejorando la competitividad de empresas, optimizando procesos y
-                brindando a nuestros clientes herramientas de vanguardia que
-                resuelvan sus necesidades tecnológicas de manera eficiente y
-                sostenible.
-              </p>
-            </section>
-            <section class="w-[95%]">
-              <h2 class="mt-5 text-4xl font-bold text-center underline">
-                VISIÓN
-              </h2>
-              <p class="mt-4">
-                Ser reconocidos como líderes en el desarrollo y la integración
-                de soluciones electrónicas y de software, ofreciendo productos y
-                servicios innovadores que aporten al progreso tecnológico de la
-                región. Nos visualizamos como una empresa que fomenta la
-                creación de tecnología con un impacto positivo en la vida
-                diaria, contribuyendo al desarrollo de sectores clave en
-                Colombia, y posicionándonos como un socio estratégico para
-                empresas que buscan modernizar sus operaciones y procesos.
-              </p>
-            </section>
-          </div>
+        <div>
+          <Banner2
+            title="NeuraTech"
+            img="Banners/1.webp"
+            img2="Banners/2.webp"
+            img3="Banners/3.webp"
+            desciption="La solución tecnológica que necesita tu empresa"
+          />
         </div>
-      </section>
 
-      <section class="bg-white text-[#2C3E50] mb-10" id="Proyectos">
+        <section class=" mb-10" id="Proyectos">
         <div class="flex flex-col justify-center items-center text-center">
-          <h1 class="mt-5 text-4xl font-bold">PROYECTOS</h1>
+          <h1 class="text-6xl">
+            Conoce nuestros
+            <span class="text-[#57C7EA] font-bold"> Proyectos </span>
+            
+            <span class="text-[#57C7EA] font-bold">NeuraTech</span>
+          </h1>
           <br />
-          <hr class="w-[50%] my-4 border-2 border-gray-500" />
+          <hr class="w-[50%] my-2 border-2 border-[#57C7EA]" />
           <br />
           <div class="grid grid-cols-3 content-between w-[75%]">
             <Card
@@ -176,27 +167,33 @@ import Form from "../components/form.astro";
         </div>
       </section>
 
-      <section class="bg-sky-400 text-[#2C3E50] mb-10" id="Contactos">
+      <section class="" id="Contactos">
         <div class="flex flex-col justify-center items-center text-center">
-          <h1 class="mt-5 text-4xl font-bold">CONTACTANOS</h1>
+          <h1 class="mt-5 text-4xl text-[#57C7EA] font-bold">CONTACTANOS</h1>
           <br />
-          <hr class="w-[50%] my-4 border-2 border-gray-500" />
+          <hr class="w-[50%] my-4 border-2 border-[#57C7EA]" />
           <br />
 
 			
 
-			<form class=" w-[30%] text-left mb-10" id="cont">
+          <form class=" w-[30%] text-left mb-10" id="cont">
 
-				<Form Titulo="Nombre del Usuario" param="from_name"/>
-				<Form Titulo="Mensaje" param="message"/>
-				<Form Titulo="Correo electrónico" param="id_correo"/>
+            <Form Titulo="Nombre del Usuario" param="from_name"/>
+            <Form Titulo="Mensaje" param="message"/>
+            <Form Titulo="Correo electrónico" param="id_correo"/>
 
-				<input type="submit" id="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"/>
-			</form>
+            <input type="submit" id="button" class="text-black bg-white hover:bg-[#F4F4F4] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center hover:cursor-pointer"/>
+          </form>
         </div>
 
 
       </section>
+
+
+
+
+
+      </div>
     </div>
   </body>
 </html>
@@ -234,11 +231,12 @@ import Form from "../components/form.astro";
   });
 </script>
 
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
+<script>
+  const punt = document.getElementById("content-main");
+  const puntero = document.getElementById("puntero");
+
+  punt?.addEventListener("mousemove", (e) => {
+    puntero.style.top = e.pageY - 250 + "px";
+    puntero.style.left = e.pageX - 250 + "px";
+  });
+</script>
